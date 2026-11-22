@@ -726,3 +726,104 @@ button.stub:hover {
 .steps-3 li {
   margin: 4px 0;
 }
+
+/* ---------- desktop: calmer sizes, multi-column pages ---------- */
+@media (min-width: 1024px) {
+  :root {
+    --t16: 0.9375rem;
+    --t18: 1rem;
+    --t22: 1.1875rem;
+    --t28: 1.5rem;
+    --t36: 1.875rem;
+    --s5: 20px;
+  }
+  body {
+    font-size: var(--t16);
+  }
+  .main {
+    max-width: 1120px;
+    margin-left: calc(120px + max(0px, (100vw - 120px - 1120px) / 2));
+    padding: var(--s5) var(--s5) var(--s6);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s4);
+    align-items: start;
+    align-content: start;
+  }
+  .main > * {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .main > .btn {
+    justify-self: start;
+  }
+  .masonry {
+    column-count: 2;
+    column-gap: var(--s4);
+  }
+  .masonry > section {
+    break-inside: avoid;
+    margin: 0 0 var(--s4);
+  }
+  .btn,
+  .btn.small,
+  .check,
+  .seg button,
+  .item-row,
+  .select,
+  .input,
+  .textarea {
+    min-height: 34px;
+  }
+  .btn {
+    padding: 0 var(--s3);
+    font-size: var(--t14);
+    min-width: 34px;
+  }
+  .chip {
+    min-height: 30px;
+    font-size: var(--t14);
+  }
+  .big-btn {
+    min-height: 38px;
+    font-size: var(--t16);
+  }
+  .card {
+    padding: var(--s3) var(--s4);
+  }
+  .meal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s4);
+    align-items: start;
+  }
+  .meal-grid > * + * {
+    margin-top: 0;
+  }
+  .meal-grid .row.wrap > .big-btn {
+    flex: 1 1 auto;
+  }
+  .meal-grid .row.wrap > .big-btn.primary {
+    flex-basis: 100%;
+  }
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s3);
+    align-items: start;
+  }
+  .day-grid > * + * {
+    margin-top: 0;
+  }
+  ul.cols {
+    display: block;
+    column-count: 2;
+    column-gap: var(--s5);
+  }
+  ul.cols > li {
+    break-inside: avoid;
+  }
+  .toasts {
+    bottom: var(--s4);
+  }
+}

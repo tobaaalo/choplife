@@ -71,6 +71,7 @@ describe('buildShoppingList', () => {
     expect(formatAmount(2, '')).toBe('2')
     expect(formatAmount(null, 'g')).toBe('')
     expect(formatAmount(12.4, 'tsp')).toBe('12 tsp')
+    expect(formatAmount(2.25, 'tbsp')).toBe('2¼ tbsp')
   })
 })
 

@@ -129,7 +129,7 @@ export function Recipes() {
           )}
         </div>
       ) : (
-        <ul className="list card">
+        <ul className="list card cols">
           {list.map((r) => (
             <li key={r.id}>{fill ? <FillRow recipe={r} /> : <Row recipe={r} />}</li>
           ))}

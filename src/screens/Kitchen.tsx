@@ -146,7 +146,7 @@ export function Kitchen() {
           <p className="soft">Add what you have and we will show what you can cook right now.</p>
         </div>
       ) : (
-        <ul className="list card" aria-label="Kitchen items">
+        <ul className="list card cols" aria-label="Kitchen items">
           {[...state.pantry]
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((p) => (

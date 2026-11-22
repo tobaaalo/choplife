@@ -160,7 +160,7 @@ export function Today() {
         </section>
       )}
 
-      <div className="stack">
+      <div className="stack meal-grid">
         {SLOTS.filter((s) => slots.includes(s)).map((slot) => {
           const entry = state.plan.find((e) => e.date === today && e.slot === slot)
           const recipe = entry ? byId.get(entry.recipeId) : undefined

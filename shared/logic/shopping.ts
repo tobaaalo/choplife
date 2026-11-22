@@ -25,12 +25,13 @@ export function formatAmount(amount: number | null, unit: string): string {
     a /= 1000
     u = 'l'
   }
-  if (!u) {
+  if (!u || (a < 10 && (u === 'tsp' || u === 'tbsp' || u === 'cup'))) {
     const q = Math.round(a * 4) / 4
     const whole = Math.floor(q)
     const frac =
       ({ 0: '', 0.25: '¼', 0.5: '½', 0.75: '¾' } as Record<number, string>)[q - whole] ?? ''
-    return `${whole > 0 || !frac ? whole : ''}${frac}`
+    const text = `${whole > 0 || !frac ? whole : ''}${frac}`
+    return u ? `${text} ${u}` : text
   }
   const rounded = a >= 10 ? Math.round(a) : Math.round(a * 10) / 10
   const n = String(rounded)

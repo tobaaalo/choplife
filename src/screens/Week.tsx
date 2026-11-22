@@ -96,7 +96,7 @@ export function Week() {
         </div>
       )}
 
-      <div className="stack">
+      <div className="stack day-grid">
         {days.map((d) => {
           const totals = dayTotals(ctx, d)
           return (
