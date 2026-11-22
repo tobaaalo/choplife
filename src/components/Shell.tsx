@@ -12,6 +12,7 @@ const TABS: { path: string; label: string; icon: IconName }[] = [
   { path: '/recipes', label: 'Recipes', icon: 'recipes' },
   { path: '/kitchen', label: 'Kitchen', icon: 'kitchen' },
   { path: '/list', label: 'List', icon: 'list' },
+  { path: '/train', label: 'Train', icon: 'dumbbell' },
 ]
 
 function go(e: React.MouseEvent<HTMLAnchorElement>, to: string) {

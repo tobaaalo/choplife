@@ -1,3 +1,4 @@
+import { bonusFor } from '../../shared/train/logic'
 import { useState } from 'react'
 import type { Recipe, Slot } from '../../shared/types'
 import { SLOTS, SLOT_LABEL } from '../../shared/types'
@@ -129,13 +130,15 @@ export function Today() {
             {people.map((p, i) => {
               const t = totals.find((x) => x.userId === p.userId)
               const eaten = eatenKcal(p.userId)
-              const target = p.targets!.kcal
+              const bonus = bonusFor(state.train, p.userId, today)
+              const target = p.targets!.kcal + bonus
               return (
                 <div key={p.userId} className="stack tight">
                   <div className="row between">
                     <span className={`pill ${i % 2 ? 'b' : 'a'}`}>{p.name}</span>
                     <span className="small">
                       {eaten} eaten · {t?.planned ?? 0} planned · {target} goal
+                      {bonus > 0 ? ` (includes +${bonus} for training)` : ''}
                     </span>
                   </div>
                   <div

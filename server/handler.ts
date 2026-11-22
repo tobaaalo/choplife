@@ -238,6 +238,7 @@ const HOUSEHOLD_TABLES = [
   'pantry',
   'manual',
   'feedback',
+  'train',
   'push_subs',
   'reminder_log',
 ]
@@ -280,7 +281,8 @@ async function detach(env: Env, userId: string, householdId: string): Promise<vo
 async function loadState(env: Env, user: UserRow, householdId: string): Promise<AppState> {
   const db = env.DB
   const cutoff = new Date(Date.now() - 90 * 86_400_000).toISOString().slice(0, 10)
-  const [h, mem, recipes, plan, logs, pantry, manual, fb] = await Promise.all([
+  const trainCutoff = new Date(Date.now() - 400 * 86_400_000).toISOString().slice(0, 10)
+  const [h, mem, recipes, plan, logs, pantry, manual, fb, train] = await Promise.all([
     db
       .prepare('SELECT id, invite_code, created_by, settings FROM households WHERE id = ?')
       .bind(householdId)
@@ -315,6 +317,12 @@ async function loadState(env: Env, user: UserRow, householdId: string): Promise<
       .prepare('SELECT data FROM feedback WHERE household_id = ?')
       .bind(householdId)
       .all<{ data: string }>(),
+    db
+      .prepare(
+        "SELECT data FROM train WHERE household_id = ? AND (kind IN ('goal','level','pref') OR date >= ?)",
+      )
+      .bind(householdId, trainCutoff)
+      .all<{ data: string }>(),
   ])
   if (!h) throw new HttpError(404, 'no_household', 'Household not found.')
   const members: Member[] = mem.results.map((m) => ({
@@ -339,6 +347,7 @@ async function loadState(env: Env, user: UserRow, householdId: string): Promise<
     pantry: parse(pantry.results),
     manual: parse(manual.results),
     feedback: parse(fb.results),
+    train: parse(train.results),
   }
 }
 
@@ -351,6 +360,7 @@ const LIMITS: Record<string, number> = {
   pantry: 500,
   manual: 500,
   feedback: 1000,
+  train: 8000,
 }
 const ENTITIES = Object.keys(LIMITS)
 
@@ -380,6 +390,15 @@ async function applyBatch(ctx: Ctx, raw: unknown): Promise<void> {
             .prepare('DELETE FROM feedback WHERE household_id = ? AND id = ?')
             .bind(householdId, id),
         )
+      }
+      if (entity === 'train') {
+        // You can only delete your own training entries.
+        stmts.push(
+          db
+            .prepare('DELETE FROM train WHERE household_id = ? AND id = ? AND user_id = ?')
+            .bind(householdId, id, user.id),
+        )
+        continue
       }
       stmts.push(
         db.prepare(`DELETE FROM ${entity} WHERE household_id = ? AND id = ?`).bind(householdId, id),
@@ -450,6 +469,18 @@ async function applyBatch(ctx: Ctx, raw: unknown): Promise<void> {
               'INSERT INTO manual (household_id, id, data) VALUES (?, ?, ?) ON CONFLICT(household_id, id) DO UPDATE SET data = excluded.data',
             )
             .bind(householdId, id, JSON.stringify(m)),
+        )
+        break
+      }
+      case 'train': {
+        const t = v.trainItem(bodyObj, id, user.id)
+        // An id that already belongs to someone else cannot be overwritten.
+        stmts.push(
+          db
+            .prepare(
+              'INSERT INTO train (household_id, id, user_id, kind, date, data) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(household_id, id) DO UPDATE SET date = excluded.date, kind = excluded.kind, data = excluded.data WHERE train.user_id = excluded.user_id',
+            )
+            .bind(householdId, id, user.id, t.kind, v.trainDate(t), JSON.stringify(t)),
         )
         break
       }
@@ -739,6 +770,7 @@ const routes: Record<string, Handler> = {
       db.prepare('DELETE FROM push_subs WHERE user_id = ?').bind(user.id),
       db.prepare('DELETE FROM profiles WHERE user_id = ?').bind(user.id),
       db.prepare('DELETE FROM logs WHERE user_id = ?').bind(user.id),
+      db.prepare('DELETE FROM train WHERE user_id = ?').bind(user.id),
     ])
     if (hid) {
       await detach(ctx.env, user.id, hid)

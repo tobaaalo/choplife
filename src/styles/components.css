@@ -77,8 +77,8 @@
   position: relative;
 }
 .tab svg {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 .tab[aria-current='page'] {
   color: var(--ink);
@@ -97,9 +97,9 @@
 @media (min-width: 1024px) {
   .tabbar {
     inset: 0 auto 0 0;
-    width: 120px;
+    width: 84px;
     grid-template-columns: 1fr;
-    grid-auto-rows: 84px;
+    grid-auto-rows: 60px;
     align-content: start;
     padding-top: 72px;
     border-top: 0;
@@ -114,10 +114,10 @@
     height: auto;
   }
   .topbar {
-    padding-left: calc(120px + var(--s4));
+    padding-left: calc(84px + var(--s4));
   }
   .main {
-    margin-left: calc(120px + max(0px, (100vw - 120px - 880px) / 2));
+    margin-left: calc(84px + max(0px, (100vw - 84px - 880px) / 2));
     margin-right: 0;
     padding-bottom: var(--s7);
   }
@@ -178,9 +178,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--s2);
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0 var(--s4);
+  min-height: 34px;
+  min-width: 34px;
+  padding: 0 var(--s3);
   border: 2px solid var(--ink);
   border-radius: var(--radius);
   background: var(--paper);
@@ -226,7 +226,7 @@
   box-shadow: 2px 2px 0 var(--stamp-dark);
 }
 .btn.small {
-  min-height: 44px;
+  min-height: 34px;
   padding: 0 var(--s3);
   font-size: var(--t14);
 }
@@ -242,8 +242,8 @@
 .icon-btn {
   display: inline-grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   background: transparent;
   border: 0;
   border-radius: var(--radius);
@@ -254,8 +254,8 @@
   background: rgb(var(--ink-rgb) / 8%);
 }
 .icon-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 /* ---------- chips and pills ---------- */
@@ -268,7 +268,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--s1);
-  min-height: 44px;
+  min-height: 34px;
   padding: 0 var(--s4);
   border: 2px solid var(--ink);
   border-radius: var(--pill);
@@ -400,7 +400,7 @@
 .select,
 .textarea {
   width: 100%;
-  min-height: 44px;
+  min-height: 34px;
   padding: var(--s2) var(--s3);
   background: var(--surface);
   border: 2px solid var(--ink);
@@ -427,11 +427,11 @@
   display: flex;
   align-items: center;
   gap: var(--s3);
-  min-height: 44px;
+  min-height: 34px;
 }
 .check input {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   accent-color: var(--ink);
 }
 
@@ -524,7 +524,7 @@ dialog.sheet::backdrop {
   color: var(--paper);
   border-color: var(--paper);
   box-shadow: none;
-  min-height: 44px;
+  min-height: 34px;
 }
 .banner {
   padding: var(--s3) var(--s4);
@@ -596,7 +596,7 @@ dialog.sheet::backdrop {
   display: flex;
   align-items: center;
   gap: var(--s3);
-  min-height: 52px;
+  min-height: 38px;
   padding: var(--s2) 0;
 }
 .welcome {
@@ -617,7 +617,7 @@ dialog.sheet::backdrop {
   overflow: hidden;
 }
 .seg button {
-  min-height: 44px;
+  min-height: 34px;
   padding: 0 var(--s4);
   border: 0;
   background: var(--paper);
@@ -671,8 +671,8 @@ dialog.sheet::backdrop {
 .chip svg,
 .item-row svg,
 .pill svg {
-  width: 1.25em;
-  height: 1.25em;
+  width: 1em;
+  height: 1em;
   flex: none;
 }
 .list.card {
@@ -688,7 +688,7 @@ input[type='time'].input {
 button.stub {
   cursor: pointer;
   text-align: left;
-  min-height: 44px;
+  min-height: 34px;
   font: inherit;
   color: inherit;
 }
@@ -711,7 +711,7 @@ button.stub:hover {
   color: var(--on-accent);
 }
 .big-btn {
-  min-height: 56px;
+  min-height: 38px;
   font-size: var(--t18);
 }
 .tip {
@@ -730,19 +730,18 @@ button.stub:hover {
 /* ---------- desktop: calmer sizes, multi-column pages ---------- */
 @media (min-width: 1024px) {
   :root {
-    --t16: 0.9375rem;
-    --t18: 1rem;
-    --t22: 1.1875rem;
-    --t28: 1.5rem;
-    --t36: 1.875rem;
-    --s5: 20px;
-  }
-  body {
-    font-size: var(--t16);
+    --t16: 0.8125rem;
+    --t14: 0.75rem;
+    --t12: 0.65625rem;
+    --t18: 0.875rem;
+    --t22: 1rem;
+    --t28: 1.1875rem;
+    --t36: 1.5rem;
+    --s5: 16px;
   }
   .main {
     max-width: 1120px;
-    margin-left: calc(120px + max(0px, (100vw - 120px - 1120px) / 2));
+    margin-left: calc(84px + max(0px, (100vw - 84px - 1120px) / 2));
     padding: var(--s5) var(--s5) var(--s6);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -758,6 +757,7 @@ button.stub:hover {
     justify-self: start;
   }
   .masonry {
+    display: block;
     column-count: 2;
     column-gap: var(--s4);
   }
@@ -773,19 +773,19 @@ button.stub:hover {
   .select,
   .input,
   .textarea {
-    min-height: 34px;
+    min-height: 28px;
   }
   .btn {
     padding: 0 var(--s3);
     font-size: var(--t14);
-    min-width: 34px;
+    min-width: 28px;
   }
   .chip {
-    min-height: 30px;
+    min-height: 24px;
     font-size: var(--t14);
   }
   .big-btn {
-    min-height: 38px;
+    min-height: 30px;
     font-size: var(--t16);
   }
   .card {
@@ -826,4 +826,53 @@ button.stub:hover {
   .toasts {
     bottom: var(--s4);
   }
+}
+
+/* ---------- training ---------- */
+.setrow {
+  display: grid;
+  grid-template-columns: 28px 1fr 1fr 34px;
+  gap: var(--s2);
+  align-items: center;
+}
+.setrow.head {
+  font-family: var(--font-label);
+  font-size: var(--t12);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+.setrow .input {
+  text-align: center;
+}
+.chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.chart {
+  margin: 0;
+}
+.goal {
+  display: grid;
+  gap: var(--s2);
+  padding-bottom: var(--s2);
+  border-bottom: 1px dashed var(--paper-edge);
+}
+ul.plain {
+  margin: 0;
+  padding-left: var(--s5);
+}
+ol.steps {
+  margin: 0;
+  padding-left: var(--s5);
+  display: grid;
+  gap: var(--s2);
+}
+a.chip {
+  text-decoration: none;
+  color: inherit;
+}
+a.chip[aria-current='page'] {
+  background: var(--ink);
+  color: var(--paper);
 }

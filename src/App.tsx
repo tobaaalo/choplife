@@ -12,6 +12,7 @@ import { Recipes } from './screens/Recipes'
 import { RecipeEditor } from './screens/RecipeEditor'
 import { Kitchen } from './screens/Kitchen'
 import { List } from './screens/List'
+import { Train } from './screens/Train'
 import { Settings } from './screens/Settings'
 import { Account } from './screens/Account'
 import { Privacy, Terms } from './screens/Legal'
@@ -115,6 +116,8 @@ export default function App() {
         <Kitchen />
       ) : path === '/list' ? (
         <List />
+      ) : path === '/train' || path.startsWith('/train/') ? (
+        <Train />
       ) : path === '/settings' ? (
         <Settings />
       ) : path === '/account' ? (

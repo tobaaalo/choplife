@@ -57,6 +57,7 @@ const HOUSEHOLD_TABLES = [
   'pantry',
   'manual',
   'feedback',
+  'train',
   'push_subs',
   'reminder_log',
 ]

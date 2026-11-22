@@ -3,7 +3,7 @@ import type { AppState, Feedback, HouseholdSettings, Profile } from '../../share
 import { emptyProfile } from '../../shared/types'
 import { api, ApiError, isNetworkError } from './api'
 
-export type Entity = 'recipes' | 'plan' | 'logs' | 'pantry' | 'manual' | 'feedback'
+export type Entity = 'recipes' | 'plan' | 'logs' | 'pantry' | 'manual' | 'feedback' | 'train'
 export interface Op {
   op: 'put' | 'delete'
   entity: Entity
@@ -142,6 +142,11 @@ export function applyOp(s: AppState, o: Op): AppState {
       return {
         ...s,
         manual: put ? upsert(s.manual, o.id, body as never) : s.manual.filter((p) => p.id !== o.id),
+      }
+    case 'train':
+      return {
+        ...s,
+        train: put ? upsert(s.train, o.id, body as never) : s.train.filter((t) => t.id !== o.id),
       }
     case 'feedback': {
       const fb = s.feedback.filter((f) => f.recipeId !== o.id)

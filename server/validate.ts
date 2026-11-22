@@ -11,6 +11,8 @@ import type {
   Slot,
 } from '../shared/types'
 import { AISLES, SLOTS } from '../shared/types'
+import { LEVELS, SPORTS } from '../shared/train/types'
+import type { TrainItem } from '../shared/train/types'
 import { HttpError } from './types'
 
 type Obj = Record<string, unknown>
@@ -253,4 +255,69 @@ export function settings(v: unknown): HouseholdSettings {
     quietTo: o.quietTo == null ? null : time(o.quietTo, 'Quiet hours end'),
     shoppingNudge: bool(o.shoppingNudge),
   }
+}
+
+export function trainItem(v: unknown, idValue: string, userId: string): TrainItem {
+  const o = obj(v, 'Training entry')
+  const base = { id: idValue, userId }
+  const kind = oneOf(o.kind, 'kind', ['workout', 'session', 'goal', 'level', 'pref'] as const)
+  switch (kind) {
+    case 'workout': {
+      const exercises = arr(o.exercises, 'exercises', 30).map((e) => {
+        const x = obj(e, 'Exercise')
+        return {
+          name: str(x.name, 'Exercise name', 80, { min: 1 }),
+          sets: arr(x.sets, 'sets', 30).map((st) => {
+            const y = obj(st, 'Set')
+            return { reps: num(y.reps, 'Reps', 0, 1000), kg: num(y.kg, 'Weight', 0, 1000) }
+          }),
+        }
+      })
+      return {
+        ...base,
+        kind,
+        date: date(o.date),
+        name: str(o.name, 'Workout name', 60, { min: 1 }),
+        exercises,
+        notes: optStr(o.notes, 'Notes', 500),
+        done: bool(o.done),
+      }
+    }
+    case 'session':
+      return {
+        ...base,
+        kind,
+        date: date(o.date),
+        sport: oneOf(o.sport, 'Sport', SPORTS),
+        minutes: num(o.minutes, 'Minutes', 1, 600),
+        distance: optNum(o.distance, 'Distance', 0, 100000),
+        drills: strList(o.drills, 'drills', 20, 40),
+        rating: num(o.rating ?? 3, 'Rating', 1, 5),
+        notes: optStr(o.notes, 'Notes', 500),
+      }
+    case 'goal':
+      return {
+        ...base,
+        kind,
+        area: oneOf(o.area, 'Area', [...SPORTS, 'gym'] as const),
+        text: str(o.text, 'Goal', 120, { min: 1 }),
+        target: num(o.target, 'Target', 0, 1000000),
+        progress: num(o.progress ?? 0, 'Progress', 0, 1000000),
+        unit: optStr(o.unit, 'Unit', 20),
+        done: bool(o.done),
+      }
+    case 'level':
+      return {
+        ...base,
+        kind,
+        sport: oneOf(o.sport, 'Sport', SPORTS),
+        level: oneOf(o.level, 'Level', LEVELS),
+      }
+    case 'pref':
+      return { ...base, kind, trainingKcal: num(o.trainingKcal, 'Training calories', 0, 2000) }
+  }
+}
+
+export function trainDate(item: TrainItem): string {
+  return 'date' in item ? item.date : '0000-00-00'
 }

@@ -546,3 +546,74 @@ describe('household management and deletion', () => {
     expect(users?.n).toBe(0)
   })
 })
+
+describe('training entries', () => {
+  const workout = (userId: string, id = 'w1', name = 'Push') => ({
+    id,
+    userId,
+    kind: 'workout',
+    date: '2026-11-20',
+    name,
+    notes: '',
+    done: true,
+    exercises: [{ name: 'Bench press', sets: [{ reps: 5, kg: 60 }] }],
+  })
+
+  it('saves, lists and deletes your own entries', async () => {
+    const a = await signup('t-a@example.com')
+    const me = (await a.state()).user.id
+    const put = await a.call('POST', '/api/batch', {
+      ops: [{ op: 'put', entity: 'train', id: 'w1', body: workout(me) }],
+    })
+    expect(put.status).toBe(200)
+    expect((await a.state()).train.map((t) => t.id)).toEqual(['w1'])
+    await a.call('POST', '/api/batch', { ops: [{ op: 'delete', entity: 'train', id: 'w1' }] })
+    expect((await a.state()).train).toEqual([])
+  })
+
+  it('keeps households separate and refuses to edit a partner or another household', async () => {
+    const a = await signup('t2-a@example.com')
+    const code = (await a.state()).household.inviteCode
+    const partner = new Client('4.4.4.4')
+    await partner.call('POST', '/api/auth/signup', {
+      name: 'Wife',
+      email: 't2-b@example.com',
+      password: 'password123',
+      mode: 'join',
+      code,
+    })
+    const other = await signup('t2-c@example.com', 'Other', {}, '5.5.5.5')
+    const aId = (await a.state()).user.id
+    const pId = (await partner.state()).user.id
+
+    await a.call('POST', '/api/batch', {
+      ops: [{ op: 'put', entity: 'train', id: 'w1', body: workout(aId) }],
+    })
+    // other household sees nothing and cannot delete
+    expect((await other.state()).train).toEqual([])
+    await other.call('POST', '/api/batch', { ops: [{ op: 'delete', entity: 'train', id: 'w1' }] })
+    expect((await a.state()).train.length).toBe(1)
+    // partner cannot delete or overwrite it
+    await partner.call('POST', '/api/batch', { ops: [{ op: 'delete', entity: 'train', id: 'w1' }] })
+    await partner.call('POST', '/api/batch', {
+      ops: [{ op: 'put', entity: 'train', id: 'w1', body: workout(pId, 'w1', 'Hijacked') }],
+    })
+    const after = (await a.state()).train[0] as { name: string; userId: string }
+    expect(after.name).toBe('Push')
+    expect(after.userId).toBe(aId)
+  })
+
+  it('always files entries under the signed-in user and rejects bad data', async () => {
+    const a = await signup('t3-a@example.com')
+    const me = (await a.state()).user.id
+    const forged = await a.call('POST', '/api/batch', {
+      ops: [{ op: 'put', entity: 'train', id: 'w9', body: workout('not-me', 'w9') }],
+    })
+    expect(forged.status).toBe(200)
+    expect(((await a.state()).train[0] as { userId: string }).userId).toBe(me)
+    const nonsense = await a.call('POST', '/api/batch', {
+      ops: [{ op: 'put', entity: 'train', id: 'w8', body: { ...workout(me, 'w8'), kind: 'nope' } }],
+    })
+    expect(nonsense.status).toBe(400)
+  })
+})

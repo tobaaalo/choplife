@@ -161,6 +161,8 @@ export interface Member {
   profile: Profile
 }
 
+import type { TrainItem } from './train/types'
+
 export interface AppState {
   user: { id: string; name: string; email: string }
   household: {
@@ -176,6 +178,7 @@ export interface AppState {
   pantry: PantryItem[]
   manual: ManualItem[]
   feedback: Feedback[]
+  train: TrainItem[]
 }
 
 export const DEFAULT_SHARES: Record<Slot, number> = {

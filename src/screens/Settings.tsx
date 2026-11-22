@@ -7,6 +7,8 @@ import { logout, refresh, saveProfile, saveSettings, toast, useStore } from '../
 import { Link } from '../components/Shell'
 import { SelectField, TextField } from '../components/Field'
 import { Confirm } from '../components/Confirm'
+import { trainingKcal } from '../../shared/train/logic'
+import { saveTrain } from '../lib/train'
 import { setTheme, useTheme } from '../lib/theme'
 import type { Theme } from '../lib/theme'
 import { disablePush, currentSubscription, enablePush, pushSupported } from '../lib/push'
@@ -92,6 +94,21 @@ export function Settings() {
       </div>
 
       <div className="masonry">
+        <section className="card stack tight">
+          <h2>Training</h2>
+          <TextField
+            label="Extra calories on days you train"
+            hint="Added to your daily goal on Today when you log a workout or a sport session."
+            inputMode="numeric"
+            defaultValue={trainingKcal(state.train, me.id)}
+            key={trainingKcal(state.train, me.id)}
+            onBlur={(e) => {
+              const n = Math.min(2000, Math.max(0, Number(e.target.value.replace(/\D/g, '')) || 0))
+              saveTrain({ id: `pref-${me.id}`, userId: me.id, kind: 'pref', trainingKcal: n })
+            }}
+          />
+        </section>
+
         <section className="card stack tight">
           <h2>Look</h2>
           <div className="chips" role="group" aria-label="Theme">
