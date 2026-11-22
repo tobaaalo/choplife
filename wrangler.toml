@@ -1,0 +1,14 @@
+name = "choplife"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "choplife"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+migrations_dir = "migrations"
+
+[vars]
+APP_URL = "https://choplife.pages.dev"
+EMAIL_FROM = "Choplife <onboarding@resend.dev>"
+VAPID_PUBLIC_KEY = "BK9o06hf6AUWu38jeT0a9WRpIIlQTC5oKnmKBEakrgW6RdEYKgscdmSk2ZrPzqz6QBiaMr28KNUSZI_HzFP5i8Y"

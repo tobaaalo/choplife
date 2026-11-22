@@ -1,0 +1,20 @@
+{
+  "name": "Choplife",
+  "short_name": "Choplife",
+  "description": "Cook one meal, portion it for each of you, and never ask what to eat again.",
+  "start_url": "/today",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4ecdb",
+  "theme_color": "#f4ecdb",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

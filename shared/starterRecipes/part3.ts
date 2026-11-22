@@ -1,0 +1,516 @@
+import type { StarterRecipe } from './types'
+export const PART_3: Record<string, StarterRecipe> = {
+  'pasta-and-minced-meat': {
+    ingredients: [
+      ['Pasta (spaghetti or penne)', 100, 'g', 'grains'],
+      ['Minced beef', 100, 'g', 'protein'],
+      ['Onion', 60, 'g', 'veg_fruit'],
+      ['Garlic cloves', 1, '', 'veg_fruit'],
+      ['Tinned chopped tomatoes', 100, 'g', 'pantry'],
+      ['Tomato puree', 1, 'tbsp', 'pantry'],
+      ['Vegetable oil', 1, 'tbsp', 'pantry'],
+      ['Mixed herbs', 0.5, 'tsp', 'pantry'],
+      ['Beef stock cube', 0.5, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and the hot pan. Chop the onion small and crush the garlic.\n2. Heat the oil in a pan on medium heat. Cook the onion for 3 minutes until soft.\n3. Add the minced beef and the garlic. Stir and break up the lumps for 6 minutes until the meat is brown.\n4. Add the tomatoes, tomato puree, herbs, crumbled stock cube and a pinch of salt. Stir well.\n5. Turn the heat down low and let it bubble gently for 15 minutes. Stir now and then. It should look thick.\n6. While it cooks, boil a pan of salted water. Ask an adult to help with the boiling water.\n7. Put the pasta in the water and cook for 10 minutes until soft. Drain it.\n8. Put the pasta on a plate and spoon the meat sauce on top.',
+  },
+  'noodles-with-boiled-egg': {
+    ingredients: [
+      ['Instant noodles (1 pack)', 1, '', 'grains'],
+      ['Eggs', 1, '', 'dairy_eggs'],
+      ['Onion', 30, 'g', 'veg_fruit'],
+      ['Tomato', 1, '', 'veg_fruit'],
+      ['Vegetable oil', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 0.5, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the boiling water. Put the egg in a small pan of cold water.\n2. Bring the water to the boil. Then cook the egg for 9 minutes so it is hard.\n3. Put the egg in cold water for 2 minutes. Peel it and cut it in half.\n4. Chop the onion and tomato small.\n5. Heat the oil in a pan. Fry the onion and tomato for 3 minutes until soft.\n6. Boil some water in another pan. Add the noodles and cook for 3 minutes. Drain most of the water.\n7. Stir in the noodle spice pack, the crumbled seasoning cube and the fried onion and tomato.\n8. Put the noodles on a plate and put the egg on top.',
+  },
+  'noodles-with-orisirisi': {
+    ingredients: [
+      ['Instant noodles (1 pack)', 1, '', 'grains'],
+      ['Carrot', 40, 'g', 'veg_fruit'],
+      ['Green beans', 40, 'g', 'veg_fruit'],
+      ['Green pepper', 40, 'g', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Eggs', 1, '', 'dairy_eggs'],
+      ['Vegetable oil', 1, 'tbsp', 'pantry'],
+      ['Curry powder', 0.5, 'tsp', 'pantry'],
+      ['Seasoning cube', 0.5, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and the hot pan. Chop the carrot, green beans, pepper and onion into small pieces.\n2. Boil the noodles for 3 minutes in water. Drain them and keep them aside.\n3. Heat the oil in a pan on medium heat. Fry the onion for 2 minutes.\n4. Add the carrot and green beans. Fry for 4 minutes. They should be a little soft but still bright.\n5. Push the vegetables to one side. Crack the egg into the pan and stir it until it is cooked, about 2 minutes.\n6. Add the green pepper, curry powder, crumbled seasoning cube and noodle spice pack. Stir.\n7. Add the noodles and mix well for 2 minutes until everything is hot.\n8. Taste and add a pinch of salt if you need it.',
+  },
+  'garri-and-groundnut': {
+    ingredients: [
+      ['Garri', 60, 'g', 'tubers'],
+      ['Cold water', 200, 'ml', 'other'],
+      ['Roasted groundnuts (peanuts)', 40, 'g', 'protein'],
+      ['Sugar', 1, 'tbsp', 'pantry'],
+      ['Evaporated milk (optional)', 1, 'tbsp', 'dairy_eggs'],
+    ],
+    steps:
+      '1. Put the garri in a bowl.\n2. Pour in the cold water. It should cover the garri and a little more.\n3. Stir with a spoon and wait 2 minutes. The garri will swell up.\n4. Add the sugar and the milk if you want it. Stir well.\n5. If it is too thick, add a little more water. It should be loose but not like soup.\n6. Eat it with the groundnuts on the side, or throw the groundnuts into the bowl.',
+  },
+  'eba-and-ogbono-soup': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Ground ogbono', 30, 'g', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Spinach or ugu leaves', 40, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Wash the beef and dried fish. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Blend or chop the pepper.\n3. In another pot, warm the palm oil on low heat for 1 minute. Add the ogbono and stir for 1 minute. It will go thick and sticky.\n4. Add the beef stock a little at a time. Stir until it is smooth and like thick soup.\n5. Add the beef, fish, crayfish and pepper. Cook gently for 10 minutes. Stir often so it does not burn.\n6. Add the chopped leaves. Cook for 2 minutes more. Taste and add salt.\n7. For the eba, boil 200 ml of water in a pot. Take the pot off the heat. Pour in the garri slowly and stir hard with a wooden spoon until it is smooth and stretchy.\n8. Put the eba on a plate and serve with the soup.',
+  },
+  'eba-and-egusi-soup': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Ground egusi (melon seeds)', 40, 'g', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Spinach or bitterleaf', 40, 'g', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with half the onion, the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Blend the pepper and the rest of the onion to a rough paste.\n3. Heat the palm oil in a pot for 2 minutes. Add the paste and fry for 5 minutes.\n4. Mix the egusi with a little water to make a thick paste. Spoon it into the pot in small lumps. Do not stir for 5 minutes.\n5. Add the beef, dried fish, crayfish and some stock. Cover and cook on low for 15 minutes. It should look like soft curds with oil on top.\n6. Add the washed leaves and cook for 3 minutes. Taste and add salt.\n7. For the eba, boil 200 ml of water. Take the pot off the heat. Pour in the garri and stir hard until smooth.\n8. Serve the soup with the eba on the side.',
+  },
+  'eba-and-banga-soup': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Palm fruit concentrate (banga)', 150, 'ml', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Banga spice (or ground dried pepper and uyayak)', 1, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Pour the palm fruit concentrate into a pot. Add a cup of water and cook for 20 minutes on medium heat. It will turn thick and the oil will rise to the top.\n3. Blend the onion and pepper. Add them to the pot with the banga spice.\n4. Add the beef, the stock, the dried fish and the crayfish.\n5. Cook on low for 15 minutes. Stir now and then. It should be thick and dark orange-red.\n6. Taste and add salt.\n7. For the eba, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth.\n8. Serve the eba with the hot banga soup.',
+  },
+  'eba-and-oha-soup': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Oha leaves', 40, 'g', 'veg_fruit'],
+      ['Cocoyam paste or ofor', 1, 'tbsp', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Add the dried fish, crayfish and blended pepper to the pot with the beef and stock.\n3. Mix the cocoyam paste with a little warm stock. Stir it into the pot. Cook for 10 minutes. The soup will get thicker.\n4. Add the palm oil and stir well. Cook for 5 minutes.\n5. Tear the oha leaves into small pieces with your hands. Add them to the pot.\n6. Cook for 3 minutes only so the leaves stay green. Taste and add salt.\n7. For the eba, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth.\n8. Serve the oha soup with the eba.',
+  },
+  'eba-and-efo-riro': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Spinach or efo leaves', 100, 'g', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 1, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft.\n2. Blend the bell pepper, scotch bonnet and half the onion. Boil this paste in a pan for 10 minutes to cook off the water.\n3. Heat the palm oil in a pot for 2 minutes. Add the rest of the chopped onion and the locust beans. Fry for 2 minutes.\n4. Add the pepper paste and fry for 8 minutes until it is thick and the oil shows on top.\n5. Add the beef, a little stock, the dried fish and the crayfish. Cook for 5 minutes.\n6. Squeeze the water out of the washed spinach. Add it and stir. Cook for 3 minutes. Taste and add salt.\n7. For the eba, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth.\n8. Serve the efo riro with the eba.',
+  },
+  'eba-and-okra-soup': {
+    ingredients: [
+      ['Garri', 100, 'g', 'tubers'],
+      ['Okra', 100, 'g', 'veg_fruit'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Wash the okra. Chop it small or grate it.\n3. Blend the pepper. Add it to the beef pot with the dried fish, crayfish and palm oil.\n4. Cook for 5 minutes on medium heat.\n5. Add the okra and stir. Cook for 5 minutes only. The soup should be green and slippery.\n6. Taste and add salt.\n7. For the eba, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth.\n8. Serve the okra soup with the eba.',
+  },
+  'amala-and-ewedu-with-stew': {
+    ingredients: [
+      ['Yam flour (elubo)', 100, 'g', 'tubers'],
+      ['Ewedu leaves (or frozen ewedu)', 60, 'g', 'veg_fruit'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Tomatoes', 2, '', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 1, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pots. Boil the beef with the seasoning cube and salt for 25 minutes until soft.\n2. Blend the tomatoes, bell pepper, scotch bonnet and half the onion. Boil the paste for 10 minutes to cook off the water.\n3. Heat the palm oil for 2 minutes. Fry the rest of the chopped onion for 2 minutes. Add the paste and fry for 10 minutes until thick. Add the beef and a little stock. Simmer for 5 minutes. This is the stew.\n4. For the ewedu, boil the leaves in 200 ml of water for 8 minutes with a pinch of salt. Mash or blend them until smooth and slimy. Stir in the locust beans.\n5. For the amala, boil 250 ml of water. Turn the heat down low. Add the yam flour slowly, stirring all the time with a wooden spoon.\n6. Cover for 2 minutes. Then stir and press it against the pot for 3 minutes until it is smooth and stretchy and dark brown.\n7. Put the amala on a plate. Pour the ewedu around it and put the stew with beef on top.',
+  },
+  'amala-and-abula': {
+    ingredients: [
+      ['Yam flour (elubo)', 100, 'g', 'tubers'],
+      ['Ewedu leaves (or frozen ewedu)', 50, 'g', 'veg_fruit'],
+      ['Okra', 50, 'g', 'veg_fruit'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Tomatoes', 2, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pots. Boil the beef with the seasoning cube and salt for 25 minutes until soft.\n2. Blend the tomatoes, pepper and onion. Boil the paste for 10 minutes. Fry it in the palm oil for 10 minutes until thick. This is the stew.\n3. Boil the ewedu leaves in 200 ml of water for 8 minutes. Mash until smooth and slimy.\n4. Chop the okra small. Add it to the ewedu and cook for 3 minutes. Add a pinch of salt.\n5. For the amala, boil 250 ml of water. Turn the heat down low. Add the yam flour slowly and stir all the time. Cover for 2 minutes, then stir and press until smooth and stretchy, about 3 minutes.\n6. Put the amala on a plate. Pour the ewedu and okra mix next to it. Spoon the stew and the beef over the top.\n7. Abula is the mix of ewedu, gbegiri-style stew and meat on one plate, so make sure you have a bit of each in every bite.',
+  },
+  'amala-and-okra-soup': {
+    ingredients: [
+      ['Yam flour (elubo)', 100, 'g', 'tubers'],
+      ['Okra', 100, 'g', 'veg_fruit'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Chop the okra small.\n3. Add the palm oil, blended pepper, dried fish, crayfish and locust beans to the beef pot. Cook for 5 minutes.\n4. Add the okra and stir. Cook for 5 minutes only. It should be green and slippery.\n5. Taste and add salt.\n6. For the amala, boil 250 ml of water. Turn the heat down low. Add the yam flour slowly and stir all the time.\n7. Cover for 2 minutes. Then stir and press it for 3 minutes until smooth and stretchy.\n8. Serve the amala with the hot okra soup.',
+  },
+  'pounded-yam-and-egusi': {
+    ingredients: [
+      ['Yam', 250, 'g', 'tubers'],
+      ['Ground egusi (melon seeds)', 40, 'g', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Spinach or bitterleaf', 40, 'g', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with half the onion, the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Peel the yam and cut it into small pieces. Boil it in water for 15 to 20 minutes until a fork goes in easily.\n3. Blend the pepper and the rest of the onion. Fry in the hot palm oil for 5 minutes.\n4. Mix the egusi with a little water into a thick paste. Spoon it into the pot in lumps. Leave for 5 minutes without stirring.\n5. Add the beef, fish, crayfish and some stock. Cover and cook on low for 15 minutes.\n6. Add the washed leaves. Cook for 3 minutes. Taste and add salt.\n7. Drain the yam. Mash and pound it in a bowl with a strong spoon or a potato masher until it is smooth with no lumps. It should stretch.\n8. Serve the pounded yam with the egusi soup.',
+  },
+  'pounded-yam-and-efo-riro': {
+    ingredients: [
+      ['Yam', 250, 'g', 'tubers'],
+      ['Spinach or efo leaves', 100, 'g', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 1, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft.\n2. Peel the yam and cut it into small pieces. Boil it for 15 to 20 minutes until soft.\n3. Blend the bell pepper, scotch bonnet and half the onion. Boil the paste for 10 minutes to cook off the water.\n4. Heat the palm oil for 2 minutes. Fry the rest of the onion and the locust beans for 2 minutes. Add the paste and fry for 8 minutes until thick.\n5. Add the beef, fish and crayfish. Cook for 5 minutes. Add the squeezed spinach and cook for 3 minutes. Taste and add salt.\n6. Drain the yam. Pound it in a bowl with a strong spoon or a masher until smooth and stretchy with no lumps.\n7. Serve the pounded yam with the efo riro.',
+  },
+  'swallow-with-vegetable-soup': {
+    ingredients: [
+      ['Garri or yam flour', 100, 'g', 'tubers'],
+      ['Spinach or ugu leaves', 100, 'g', 'veg_fruit'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Wash the leaves and cut them small. Squeeze out the water.\n3. Blend the pepper and onion.\n4. Heat the palm oil for 2 minutes. Fry the blended mix for 5 minutes.\n5. Add the beef, a little stock, the dried fish and the crayfish. Cook for 5 minutes.\n6. Add the leaves and stir. Cook for 3 minutes so they stay green. Taste and add salt.\n7. For the swallow, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth. For yam flour, use 250 ml of water on low heat and stir for 5 minutes.\n8. Serve the swallow with the soup.',
+  },
+  'swallow-with-ewedu-and-beef-stew': {
+    ingredients: [
+      ['Garri or yam flour', 100, 'g', 'tubers'],
+      ['Ewedu leaves (or frozen ewedu)', 60, 'g', 'veg_fruit'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Tomatoes', 2, '', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 1, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Vegetable oil or palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pots. Boil the beef with the seasoning cube and salt for 25 minutes until soft.\n2. Blend the tomatoes, bell pepper, scotch bonnet and half the onion. Boil the paste for 10 minutes to cook off the water.\n3. Heat the oil for 2 minutes. Fry the rest of the chopped onion for 2 minutes. Add the paste and fry for 10 minutes until thick and the oil shows on top.\n4. Add the beef and a little stock. Simmer for 5 minutes. Taste and add salt. This is the stew.\n5. Boil the ewedu leaves in 200 ml of water for 8 minutes. Mash until smooth and slimy. Stir in the locust beans and a pinch of salt.\n6. For the swallow, boil 200 ml of water. Take the pot off the heat. Add the garri and stir hard until smooth. For yam flour, use 250 ml of water on low heat and stir for 5 minutes.\n7. Put the swallow on a plate. Add the ewedu and the beef stew.',
+  },
+  'egusi-and-semolina': {
+    ingredients: [
+      ['Semolina (dry)', 80, 'g', 'grains'],
+      ['Ground egusi (melon seeds)', 40, 'g', 'pantry'],
+      ['Beef', 80, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Spinach', 40, 'g', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with half the onion, the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Blend the pepper and the rest of the onion. Fry in the hot palm oil for 5 minutes.\n3. Mix the egusi with a little water into a thick paste. Spoon it into the pot in lumps. Leave for 5 minutes without stirring.\n4. Add the beef, fish, crayfish and some stock. Cover and cook on low for 15 minutes.\n5. Add the washed spinach and cook for 3 minutes. Taste and add salt.\n6. For the semolina, boil 250 ml of water in a pot. Turn the heat to low. Pour in the semolina slowly while stirring hard so there are no lumps.\n7. Cook for 3 minutes, stirring all the time, until it is thick, smooth and stretchy.\n8. Put the semolina on a plate and serve with the egusi soup.',
+  },
+  'edikang-ikong-and-semolina': {
+    ingredients: [
+      ['Semolina (dry)', 80, 'g', 'grains'],
+      ['Ugu (pumpkin) leaves', 80, 'g', 'veg_fruit'],
+      ['Waterleaf or spinach', 60, 'g', 'veg_fruit'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 30, 'g', 'protein'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep a little stock.\n2. Wash the ugu and waterleaf well. Cut them into thin strips.\n3. Chop the onion and pepper small.\n4. Heat the palm oil for 2 minutes. Fry the onion and pepper for 2 minutes.\n5. Add the beef, a little stock, the dried fish and the crayfish. Cook for 5 minutes.\n6. Add the waterleaf first and cook for 3 minutes. Then add the ugu and cook for 5 minutes. Do not add much water because the leaves make their own. Taste and add salt.\n7. For the semolina, boil 250 ml of water. Turn the heat to low. Pour in the semolina slowly while stirring hard. Cook for 3 minutes until thick and smooth.\n8. Serve the semolina with the soup.',
+  },
+  'okra-and-lafun': {
+    ingredients: [
+      ['Lafun (cassava flour)', 100, 'g', 'tubers'],
+      ['Okra', 100, 'g', 'veg_fruit'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Locust beans (iru)', 1, 'tsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Chop the okra small.\n3. Add the palm oil, blended pepper, dried fish, crayfish and locust beans to the beef pot. Cook for 5 minutes.\n4. Add the okra and cook for 5 minutes. It should be green and slippery. Taste and add salt.\n5. For the lafun, boil 300 ml of water. Turn the heat to low. Add the lafun slowly and stir all the time.\n6. Cover for 2 minutes. Then stir and press it against the pot for 3 minutes until smooth and stretchy.\n7. Serve the lafun with the hot okra soup.',
+  },
+  'unripe-plantain-swallow-and-okra-soup': {
+    ingredients: [
+      ['Unripe plantain', 1, '', 'tubers'],
+      ['Okra', 100, 'g', 'veg_fruit'],
+      ['Beef', 60, 'g', 'protein'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Palm oil', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Boil the beef with the seasoning cube and salt for 25 minutes until soft. Keep the stock.\n2. Peel the unripe plantain and cut it into chunks. Boil in water for 15 minutes until soft when you push in a fork.\n3. Chop the okra small. Add the palm oil, blended pepper, dried fish and crayfish to the beef pot. Cook for 5 minutes.\n4. Add the okra and cook for 5 minutes. Taste and add salt.\n5. Drain the plantain. Put it in a bowl with a spoon of the hot water.\n6. Pound or mash it hard with a strong spoon or masher until it is smooth, thick and sticky. Roll it into a ball with wet hands.\n7. Serve the plantain swallow with the okra soup.',
+  },
+  'catfish-pepper-soup-and-eko': {
+    ingredients: [
+      ['Catfish steak', 200, 'g', 'protein'],
+      ['Pepper soup spice mix', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scent leaves or basil', 10, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Eko (corn pap, ready made)', 150, 'g', 'grains'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Wash the catfish well with salt and hot water. Rinse it.\n2. Blend the onion and pepper.\n3. Put 400 ml of water in a pot. Add the blended mix, the pepper soup spice, the crumbled seasoning cube and a pinch of salt. Boil for 5 minutes.\n4. Gently add the catfish. Cook on low for 15 minutes. The fish should be white and soft and flake easily.\n5. Add the scent leaves. Cook for 2 minutes. Taste and add salt.\n6. Eko is soft set corn pap wrapped in leaves. If it is cold, steam it for 5 minutes or heat it in a microwave for 1 minute.\n7. Serve the hot fish soup in a bowl with the eko on the side.',
+  },
+  'ekuru-and-eko-with-fish': {
+    ingredients: [
+      ['Peeled beans (for ekuru)', 80, 'g', 'beans'],
+      ['Eko (corn pap, ready made)', 120, 'g', 'grains'],
+      ['Mackerel or titus fish', 100, 'g', 'protein'],
+      ['Red bell pepper (tatashe)', 1, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife, blender and boiling water. Soak the peeled beans in water for 1 hour. Rinse them.\n2. Blend the beans with a little water until thick and smooth. Add a pinch of salt.\n3. Scoop the mix into small heatproof bowls or foil cups. Cover with foil.\n4. Steam over boiling water for 40 minutes until the ekuru is firm. A knife poked in should come out clean.\n5. Blend the bell pepper, scotch bonnet and onion. Boil the paste for 8 minutes to cook off the water.\n6. Heat the palm oil for 2 minutes. Fry the paste for 8 minutes with the crumbled seasoning cube. Add the fish and cook for 8 minutes until it is hot and cooked through. Taste and add salt.\n7. Serve the ekuru and the eko with the fish stew on top.',
+  },
+  'wanke-and-shito-with-fried-croaker-plantain-and-salad': {
+    ingredients: [
+      ['Rice', 70, 'g', 'grains'],
+      ['Black-eyed beans', 50, 'g', 'beans'],
+      ['Shito (black pepper sauce)', 2, 'tbsp', 'pantry'],
+      ['Croaker fish', 150, 'g', 'protein'],
+      ['Ripe plantain', 1, '', 'tubers'],
+      ['Vegetable oil', 4, 'tbsp', 'pantry'],
+      ['Lettuce, tomato and cucumber', 100, 'g', 'veg_fruit'],
+      ['Seasoning cube', 0.5, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the hot oil, knife and boiling water. Wash the beans and boil them in water for 20 minutes until half soft.\n2. Add the rice to the same pot with a pinch of salt and more water if needed. Cook for 15 minutes until both are soft and the water is gone. This is wanke.\n3. Season the fish with the crumbled seasoning cube and salt.\n4. Heat 3 tbsp of oil in a pan on medium heat. Fry the fish for 5 minutes on each side until golden and crisp. Drain it on kitchen paper.\n5. Peel the plantain and cut it in slices. Fry in 1 tbsp of oil for 2 minutes on each side until golden brown.\n6. Wash and chop the lettuce, tomato and cucumber for the salad.\n7. Put the wanke on a plate. Add the shito, fish, plantain and salad.',
+  },
+  yamarita: {
+    ingredients: [
+      ['Yam', 200, 'g', 'tubers'],
+      ['Eggs', 2, '', 'dairy_eggs'],
+      ['Plain flour', 2, 'tbsp', 'grains'],
+      ['Vegetable oil', 4, 'tbsp', 'pantry'],
+      ['Tomato stew or pepper sauce', 3, 'tbsp', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife, boiling water and hot oil. Peel the yam and cut it into thin slices.\n2. Boil the yam slices in salted water for 8 minutes until just soft but not breaking. Drain them and let them cool a little.\n3. Crack the eggs into a bowl. Add a pinch of salt and beat well with a fork.\n4. Put the flour on a plate. Roll each yam slice in the flour. Shake off the extra.\n5. Heat the oil in a frying pan on medium heat for 2 minutes.\n6. Dip each yam slice in the egg. Put it in the pan.\n7. Fry for 3 minutes on each side until golden. Drain on kitchen paper.\n8. Serve hot with the tomato stew or pepper sauce.',
+  },
+  'yam-and-potato-porridge': {
+    ingredients: [
+      ['Yam', 150, 'g', 'tubers'],
+      ['Potato', 100, 'g', 'tubers'],
+      ['Tomatoes', 1, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Palm oil', 1.5, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pot. Peel the yam and potato. Cut them into small cubes about 2 cm wide.\n2. Blend or chop the tomato, onion and pepper.\n3. Put the palm oil in a pot on medium heat for 1 minute. Add the tomato mix and fry for 5 minutes.\n4. Add the yam, potato, crayfish and crumbled seasoning cube. Pour in water until it just covers them.\n5. Cover and cook on medium heat for 20 minutes. Stir once or twice.\n6. When the yam and potato are soft, mash a few pieces on the side of the pot. This makes it thick and creamy.\n7. Taste and add salt. Cook for 2 more minutes and serve hot.',
+  },
+  'yam-and-sweet-potato-porridge': {
+    ingredients: [
+      ['Yam', 150, 'g', 'tubers'],
+      ['Sweet potato', 100, 'g', 'tubers'],
+      ['Tomatoes', 1, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Palm oil', 1.5, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pot. Peel the yam and sweet potato. Cut them into small cubes about 2 cm wide.\n2. Blend or chop the tomato, onion and pepper.\n3. Put the palm oil in a pot on medium heat for 1 minute. Add the tomato mix and fry for 5 minutes.\n4. Add the yam, crayfish and crumbled seasoning cube. Pour in water until it just covers them. Cook for 10 minutes.\n5. Add the sweet potato. It cooks faster. Cook for 10 more minutes with the lid on.\n6. When everything is soft, mash a few pieces against the side of the pot. This makes it thick.\n7. Taste and add salt. Cook for 2 more minutes and serve hot.',
+  },
+  'yam-and-vegetable-pottage': {
+    ingredients: [
+      ['Yam', 200, 'g', 'tubers'],
+      ['Spinach or ugu leaves', 60, 'g', 'veg_fruit'],
+      ['Tomatoes', 1, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Palm oil', 1.5, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot pot. Peel the yam and cut it into small cubes.\n2. Blend or chop the tomato, onion and pepper. Wash and slice the leaves.\n3. Heat the palm oil in a pot for 1 minute. Fry the tomato mix for 5 minutes.\n4. Add the yam, crayfish and crumbled seasoning cube. Pour in water until it just covers the yam.\n5. Cover and cook for 20 minutes until the yam is soft.\n6. Mash a few pieces against the side of the pot so the pottage gets thick.\n7. Add the leaves and stir. Cook for 3 minutes. Taste and add salt.\n8. Serve hot. The leaves should still be green.',
+  },
+  'yam-porridge-asaro-with-peppered-turkey': {
+    ingredients: [
+      ['Yam', 200, 'g', 'tubers'],
+      ['Turkey wing or drumstick pieces', 150, 'g', 'protein'],
+      ['Tomatoes', 1, '', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 0.5, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 1, '', 'veg_fruit'],
+      ['Onion', 60, 'g', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife, boiling water and hot oil. Boil the turkey with half the onion, the seasoning cube and salt for 25 minutes until cooked through.\n2. Take out the turkey. Fry it in 1 tbsp of oil for 5 minutes until brown. Set it aside. Keep the stock.\n3. Peel the yam and cut it into small cubes.\n4. Blend the tomato, bell pepper, scotch bonnet and the rest of the onion. Boil this paste for 8 minutes.\n5. Heat 1 tbsp of palm oil for 1 minute. Fry the paste for 5 minutes.\n6. Add the yam, crayfish and enough turkey stock to just cover. Cook for 20 minutes until the yam is soft.\n7. Mash a few pieces against the side of the pot to make it thick. Taste and add salt.\n8. Put the yam porridge on a plate and put the peppered turkey on top.',
+  },
+  'plantain-with-fish-sauce': {
+    ingredients: [
+      ['Ripe plantain', 1, '', 'tubers'],
+      ['Mackerel or titus fish', 100, 'g', 'protein'],
+      ['Tomatoes', 2, '', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 0.5, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Vegetable oil', 3, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and hot oil. Blend the tomatoes, bell pepper and scotch bonnet. Chop the onion.\n2. Boil the blended mix in a pan for 8 minutes to cook off the water.\n3. Heat 2 tbsp of oil in another pan for 1 minute. Fry the onion for 2 minutes. Add the paste and the crumbled seasoning cube. Fry for 8 minutes until thick.\n4. Add the fish and a splash of water. Cook on low for 8 minutes until the fish is hot and flakes easily. Taste and add salt.\n5. Peel the plantain and cut it in slices.\n6. Heat 1 tbsp of oil in a frying pan. Fry the slices for 2 minutes on each side until golden brown. Drain on kitchen paper.\n7. Put the plantain on a plate and spoon the fish sauce on top.',
+  },
+  'boiled-plantain-and-vegetable-soup': {
+    ingredients: [
+      ['Plantain (ripe or unripe)', 1, '', 'tubers'],
+      ['Spinach or ugu leaves', 80, 'g', 'veg_fruit'],
+      ['Tomatoes', 1, '', 'veg_fruit'],
+      ['Onion', 40, 'g', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Palm oil', 1.5, 'tbsp', 'pantry'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Peel the plantain and cut it into chunks.\n2. Boil the plantain in salted water for 15 minutes until soft when you push in a fork. Drain it.\n3. Blend the tomato, onion and pepper.\n4. Heat the palm oil for 1 minute. Fry the blended mix for 5 minutes.\n5. Add 150 ml of water, the dried fish, crayfish and crumbled seasoning cube. Cook for 5 minutes.\n6. Add the washed, sliced leaves. Cook for 3 minutes so they stay green. Taste and add salt.\n7. Put the plantain in a bowl and pour the vegetable soup on top or next to it.',
+  },
+  'sweet-potato-and-fried-yam-with-sauce': {
+    ingredients: [
+      ['Sweet potato', 120, 'g', 'tubers'],
+      ['Yam', 150, 'g', 'tubers'],
+      ['Vegetable oil', 4, 'tbsp', 'pantry'],
+      ['Tomatoes', 2, '', 'veg_fruit'],
+      ['Red bell pepper (tatashe)', 0.5, '', 'veg_fruit'],
+      ['Scotch bonnet pepper', 0.5, '', 'veg_fruit'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife, boiling water and hot oil. Peel the sweet potato and yam. Cut them into thick fingers or slices.\n2. Boil the sweet potato for 8 minutes in salted water until almost soft. Drain it.\n3. Boil the yam in salted water for 8 minutes. Drain it and let it dry for a few minutes.\n4. Heat 3 tbsp of oil in a frying pan on medium heat. Fry the yam for 4 minutes each side until golden. Fry the sweet potato for 3 minutes each side. Drain on kitchen paper.\n5. Blend the tomatoes, bell pepper, scotch bonnet and half the onion. Boil the paste for 8 minutes.\n6. Heat 1 tbsp of oil. Fry the rest of the chopped onion for 2 minutes. Add the paste and crumbled seasoning cube. Fry for 8 minutes until thick. Taste and add salt.\n7. Serve the fried yam and sweet potato with the sauce.',
+  },
+  'boiled-yam-and-dried-pepper-sauce': {
+    ingredients: [
+      ['Yam', 250, 'g', 'tubers'],
+      ['Dried chilli pepper (ground)', 1, 'tsp', 'pantry'],
+      ['Onion', 50, 'g', 'veg_fruit'],
+      ['Palm oil', 2, 'tbsp', 'pantry'],
+      ['Dried fish', 20, 'g', 'protein'],
+      ['Ground crayfish', 1, 'tbsp', 'pantry'],
+      ['Seasoning cube', 1, '', 'pantry'],
+      ['Salt', null, '', 'pantry'],
+    ],
+    steps:
+      '1. Ask an adult to help with the knife and boiling water. Peel the yam and cut it into thick slices.\n2. Put the yam in a pot with water and a pinch of salt. Boil for 15 to 20 minutes until a fork goes in easily. Drain it.\n3. Chop the onion small.\n4. Heat the palm oil in a pan for 1 minute. Fry the onion for 3 minutes until soft.\n5. Add the dried pepper, the crayfish, the flaked dried fish and the crumbled seasoning cube. Stir for 2 minutes.\n6. Add 3 tbsp of water. Cook for 3 minutes until it is a thick sauce. Taste and add salt.\n7. Serve the hot boiled yam with the dried pepper sauce.',
+  },
+}

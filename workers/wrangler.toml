@@ -1,0 +1,16 @@
+name = "choplife-reminders"
+main = "reminders.ts"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "choplife"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+[vars]
+VAPID_PUBLIC_KEY = "BK9o06hf6AUWu38jeT0a9WRpIIlQTC5oKnmKBEakrgW6RdEYKgscdmSk2ZrPzqz6QBiaMr28KNUSZI_HzFP5i8Y"
+VAPID_SUBJECT = "mailto:you@example.com"

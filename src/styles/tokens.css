@@ -1,0 +1,96 @@
+@import '@fontsource/gloock/400.css';
+@import '@fontsource/atkinson-hyperlegible/400.css';
+@import '@fontsource/atkinson-hyperlegible/700.css';
+@import '@fontsource/special-elite/400.css';
+
+:root {
+  --paper: #f4ecdb;
+  --paper-2: #ece1c8;
+  --paper-edge: #d8c9a8;
+  --ink: #2b2219;
+  --ink-soft: #5e5040;
+  --stamp: #c0421b;
+  --stamp-dark: #9c3414;
+  --person-a: #1f5c55;
+  --person-b: #6b2f55;
+  --ok: #35692f;
+  --warn: #8a5208;
+  --surface: #fbf6ea;
+  --tint-warn: #f7e6c4;
+  --tint-err: #f3d9cc;
+  --on-accent: #fff;
+  --ink-rgb: 43 34 25;
+  --edge-rgb: 216 201 168;
+  color-scheme: light;
+
+  --font-display: 'Gloock', Georgia, 'Times New Roman', serif;
+  --font-body: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-label: 'Special Elite', 'Courier New', monospace;
+
+  --t12: 0.75rem;
+  --t14: 0.875rem;
+  --t16: 1rem;
+  --t18: 1.125rem;
+  --t22: 1.375rem;
+  --t28: 1.75rem;
+  --t36: 2.25rem;
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+
+  --radius: 2px;
+  --pill: 999px;
+  --shadow: 0 1px 0 var(--paper-edge), 0 2px 6px rgb(0 0 0 / 14%);
+  --nav-h: 64px;
+}
+
+:root[data-theme='dark'] {
+  --paper: #1e1913;
+  --paper-2: #2a231a;
+  --paper-edge: #4a3f30;
+  --ink: #f1e8d6;
+  --ink-soft: #b9ab94;
+  --stamp: #e8693f;
+  --stamp-dark: #f08a63;
+  --person-a: #62b8ac;
+  --person-b: #d890bf;
+  --ok: #82c374;
+  --warn: #e3a94d;
+  --surface: #15110c;
+  --tint-warn: #3a2d12;
+  --tint-err: #43211a;
+  --on-accent: #1e1913;
+  --ink-rgb: 241 232 214;
+  --edge-rgb: 74 63 48;
+  --shadow: 0 1px 0 var(--paper-edge), 0 2px 8px rgb(0 0 0 / 50%);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #1e1913;
+    --paper-2: #2a231a;
+    --paper-edge: #4a3f30;
+    --ink: #f1e8d6;
+    --ink-soft: #b9ab94;
+    --stamp: #e8693f;
+    --stamp-dark: #f08a63;
+    --person-a: #62b8ac;
+    --person-b: #d890bf;
+    --ok: #82c374;
+    --warn: #e3a94d;
+    --surface: #15110c;
+    --tint-warn: #3a2d12;
+    --tint-err: #43211a;
+    --on-accent: #1e1913;
+    --ink-rgb: 241 232 214;
+    --edge-rgb: 74 63 48;
+    --shadow: 0 1px 0 var(--paper-edge), 0 2px 8px rgb(0 0 0 / 50%);
+    color-scheme: dark;
+  }
+}
